@@ -131,7 +131,7 @@ export default {
         this.form.username = '';
         this.form.email = '';
         this.form.password = '';
-        this.form.role = ''; // Clear the role field after registration
+        this.form.role = ''; 
       } catch (error) {
         this.message = error.response?.data?.message || "Registration failed.";
       }

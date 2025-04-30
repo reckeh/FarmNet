@@ -24,7 +24,6 @@ def allowed_file(filename):
 def create_product():
     image = request.files.get('image')
     
-    # Debugging prints (you can comment these later)
     print("Image Object:", image)
     print("Image Filename:", image.filename if image else "No image received")
 
@@ -118,7 +117,6 @@ def update_product(product_id):
     product.quantity = data.get("quantity", product.quantity)
     product.unit = data.get("unit", product.unit)
 
-    # Handle boolean properly
     available = data.get("available")
     if available is not None:
         product.available = available.lower() == "true"

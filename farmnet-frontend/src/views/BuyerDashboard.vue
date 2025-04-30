@@ -35,16 +35,16 @@
               <div
                 v-for="item in order.items"
                 :key="item.product_id"
-                class="order-item flex items-center border-b pb-2"
+                class="order-item card-hover border border-gray-300 p-4 rounded-lg shadow-md bg-white"
               >
                 <img
                   :src="baseURL + item.product_image"
                   alt="Product"
-                  class="w-16 h-16 object-cover rounded mr-4"
+                  class="w-full h-40 object-cover rounded mb-4"
                 />
-                <div class="flex-1">
+                <div>
                   <p class="font-medium">{{ item.product_name }}</p>
-                  <p>Price: {{ item.product_price }} KES</p>
+                  <p>Price: KES {{ item.product_price }}</p>
                   <p>Quantity: {{ item.quantity }}</p>
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default {
         return;
       }
 
-      fetch("http://127.0.0.1:5000/cart/cart", {
+      fetch("http://127.0.0.1:5000/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -338,6 +338,11 @@ export default {
   padding: 10px;
   display: flex;
   align-items: center;
+  transition: border 0.3s ease;
+}
+
+.order-item:hover {
+  border: 2px solid #007bff;
 }
 
 .order-item img {

@@ -26,7 +26,6 @@ DB_CONFIG = {
     'port': '5432'
 }
 
-# Complete commodity mapping based on KAMIS dropdown
 COMMODITY_MAP = {
     '1': 'Dry Maize',
     '2': 'Red Sorghum',
@@ -374,7 +373,6 @@ def scrape_all_commodities():
     for commodity_id, commodity_name in COMMODITY_MAP.items():
         logging.info(f"Scraping data for {commodity_name} (ID: {commodity_id})")
         
-        # Scrape first page
         html = scrape_kamis_page(commodity_id)
         if not html:
             continue
@@ -384,7 +382,7 @@ def scrape_all_commodities():
         total_new_records += new_records
         logging.info(f"Added {new_records} new records for {commodity_name}")
         
-        # Add random delay to avoid being blocked
+        # random delay to avoid being blocked
         sleep(random.uniform(1, 3))
     
     logging.info(f"Total new records added: {total_new_records}")

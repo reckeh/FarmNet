@@ -15,9 +15,9 @@ export default defineConfig({
     },
   },
   server: {
-    historyApiFallback: true, // ✅ ensures proper SPA fallback for deep routes
+    historyApiFallback: true, 
     proxy: {
-      '/api': 'http://localhost:5000', // Correct way to set up proxy
+      '/api': 'http://localhost:5000',
     },
   },
 });

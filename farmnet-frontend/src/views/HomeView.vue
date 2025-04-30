@@ -59,9 +59,7 @@
         </div>
       </div>
     </section>
-
-    <!-- Other Sections (Smart Farming, Featured Products, Testimonials, Footer) -->
-    <!-- Add your other sections here styled inline similarly -->
+    
   </div>
 </template>
 

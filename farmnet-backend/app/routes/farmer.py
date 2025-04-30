@@ -8,9 +8,7 @@ farmer_bp = Blueprint('farmer', __name__)
 
 # Helper function to save image and return URL
 def save_image(image_file):
-    # Generate a unique filename to avoid overwriting
     filename = secure_filename(image_file.filename)
-    # You can also append a timestamp or UUID to make filenames unique
     filename = f"{int(time.time())}_{filename}"
     upload_folder = os.path.join(current_app.root_path, 'static', 'uploads')
     os.makedirs(upload_folder, exist_ok=True)
@@ -23,7 +21,6 @@ def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-# Create a new product (POST /api/farmer/products)
 @farmer_bp.route('/products', methods=['POST'])
 @jwt_required()
 def create_product():
@@ -73,7 +70,6 @@ def create_product():
         "image_url": image_url
     }), 201
 
-# Get all products for the current farmer (GET /api/farmer/products)
 @farmer_bp.route('/products', methods=['GET'])
 @jwt_required()
 def get_my_products():
@@ -94,7 +90,6 @@ def get_my_products():
 
     return jsonify(products_data), 200
 
-# Get market prices (GET /api/farmer/market-prices?county=...)
 @farmer_bp.route('/market-prices', methods=['GET'])
 def get_market_prices():
     county = request.args.get('county')

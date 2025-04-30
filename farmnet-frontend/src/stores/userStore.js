@@ -2,16 +2,14 @@ import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 
 export const useUserStore = defineStore('user', () => {
-  // State variables for user and token
   const user = ref(null);
   const token = ref(null);
 
-  // Computed properties to check if the user is authenticated and their role
-  const isAuthenticated = computed(() => !!token.value); // If token exists, user is authenticated
-  const isAdmin = computed(() => user.value?.role === 'ADMIN'); // Admin role check
-  const isFarmer = computed(() => user.value?.role === 'FARMER'); // Farmer role check
-  const isBuyer = computed(() => user.value?.role === 'BUYER'); // Buyer role check
-  const isAgriExpert = computed(() => user.value?.role === 'AGRI_EXPERT'); // AgriExpert role check
+  const isAuthenticated = computed(() => !!token.value); 
+  const isAdmin = computed(() => user.value?.role === 'ADMIN'); 
+  const isFarmer = computed(() => user.value?.role === 'FARMER'); 
+  const isBuyer = computed(() => user.value?.role === 'BUYER'); /
+  const isAgriExpert = computed(() => user.value?.role === 'AGRI_EXPERT'); //
   const currentUser = computed(() => user.value); // Get the current user
 
   // Login function
@@ -40,10 +38,9 @@ export const useUserStore = defineStore('user', () => {
       token.value = storedToken;
       try {
         user.value = JSON.parse(storedUser);
-        // Ensure the role is in uppercase when initializing
         user.value.role = user.value.role.toUpperCase();
       } catch (e) {
-        logout(); // If there is an error in parsing, logout
+        logout(); 
       }
     }
   }

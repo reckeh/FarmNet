@@ -20,16 +20,14 @@ def get_weather():
         return jsonify({'error': 'Latitude and longitude are required'}), 400
 
     try:
-        weather_data = fetch_weather_from_api(lat, lon)  # your current API fetch function
-        save_weather_to_db(weather_data)  # function to save to DB
+        weather_data = fetch_weather_from_api(lat, lon)  
+        save_weather_to_db(weather_data)  
         return jsonify(weather_data)
 
     except Exception as api_error:
-        # Log API failure
         print(f"API fetch failed: {api_error}")
 
         try:
-            # Pull the most recent weather data from the DB
             latest = WeatherData.query.order_by(WeatherData.date_recorded.desc()).first()
 
             if latest:

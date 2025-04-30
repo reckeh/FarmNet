@@ -105,7 +105,6 @@ export default {
           farmer: '/farmer/dashboard',
           buyer: '/buyer/dashboard',
           admin: '/admin/dashboard',
-          // Add other roles as needed
         };
 
         const redirectPath = dashboards[role] || '/';

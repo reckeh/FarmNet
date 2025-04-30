@@ -1,196 +1,229 @@
 <template>
-  <div class="cart-page">
-    <h1 class="text-3xl font-bold mb-6">🛒 My Cart</h1>
+  <div class="cart-container">
+    <h2>Your Cart</h2>
 
-    <div v-if="cart.length === 0" class="text-gray-600 text-lg">Your cart is empty.</div>
+    <!-- If cart is empty -->
+    <div v-if="cart.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <!-- If cart has items -->
     <div v-else>
-      <div class="cart-items">
-        <div
-          v-for="item in cart"
-          :key="item.product_id"
-          class="cart-item"
-        >
+      <div v-for="(item, index) in cart" :key="item.id" class="cart-item">
+        <div class="product-image-container">
           <img
-            :src="baseURL + item.image_url"
-            alt="Product Image"
-            class="item-image"
+            :src="baseURL + item.product_image"
+            alt="Product"
+            class="product-image"
           />
-          <div class="item-details">
-            <h2 class="item-name">{{ item.name }}</h2>
-            <p class="item-price">KES {{ item.price }}</p>
-            <div class="quantity-controls">
-              <button @click="decreaseQty(item)">−</button>
-              <span>{{ item.quantity }}</span>
-              <button @click="increaseQty(item)">＋</button>
-            </div>
-            <p class="item-subtotal">
-              Subtotal: KES {{ (item.price * item.quantity).toFixed(2) }}
-            </p>
-            <button @click="removeItem(item)" class="remove-btn">Remove</button>
+        </div>
+
+        <div class="product-details">
+          <h3>{{ item.product_name }}</h3>
+          <p>Price: {{ item.price | currency }}</p>
+          <div class="quantity-control">
+            <button @click="decreaseQuantity(item)">−</button>
+            <span>{{ item.quantity }}</span>
+            <button @click="increaseQuantity(item)">+</button>
           </div>
+          <p>Total: {{ (item.price * item.quantity) | currency }}</p>
+        </div>
+
+        <div class="remove-item">
+          <button @click="removeItem(item.id)">Remove</button>
         </div>
       </div>
 
-      <div class="cart-summary">
-        <h2 class="text-xl font-semibold mb-2">Cart Summary</h2>
-        <p class="summary-total">Total: KES {{ totalAmount.toFixed(2) }}</p>
-        <router-link to="/checkout" class="checkout-button">
-          Proceed to Checkout 💳
-        </router-link>
+      <!-- Total price and Proceed to Checkout -->
+      <div class="total-section">
+        <div class="total-price">
+          <h3>Total Price: {{ total_price | currency }}</h3>
+        </div>
+        <div class="checkout-btn">
+          <button @click="goToCheckout">Proceed to Checkout</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+
 export default {
-  name: "CartView",
+  name: 'Cart',
   data() {
     return {
-      cart: JSON.parse(localStorage.getItem("cart")) || [],
-      baseURL: "http://127.0.0.1:5000/"
+      cart: [],
+      total_price: 0,
+      baseURL: 'http://localhost:5000/', 
     };
   },
-  computed: {
-    totalAmount() {
-      return this.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    }
+  mounted() {
+    this.fetchCart();
   },
   methods: {
-    increaseQty(item) {
-      item.quantity++;
-      this.updateCart();
-    },
-    decreaseQty(item) {
-      if (item.quantity > 1) {
-        item.quantity--;
-        this.updateCart();
+    async fetchCart() {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get('http://localhost:5000/cart', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        const { cart, total_price } = response.data;
+        this.cart = cart;
+        this.total_price = total_price;
+      } catch (error) {
+        console.error("Error fetching cart:", error);
       }
     },
-    removeItem(item) {
-      this.cart = this.cart.filter(i => i.product_id !== item.product_id);
-      this.updateCart();
+
+    async removeItem(itemId) {
+      try {
+        const token = localStorage.getItem('token');
+        await axios.delete(`http://localhost:5000/cart/${itemId}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        this.fetchCart(); 
+      } catch (error) {
+        console.error("Error removing item:", error);
+      }
     },
-    updateCart() {
-      localStorage.setItem("cart", JSON.stringify(this.cart));
+
+    async increaseQuantity(item) {
+      try {
+        const token = localStorage.getItem('token');
+        const updatedItem = { quantity: item.quantity + 1 };
+        await axios.put(`http://localhost:5000/cart/${item.id}`, updatedItem, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        this.fetchCart();
+      } catch (error) {
+        console.error("Error increasing quantity:", error);
+      }
+    },
+
+    async decreaseQuantity(item) {
+      if (item.quantity > 1) {
+        try {
+          const token = localStorage.getItem('token');
+          const updatedItem = { quantity: item.quantity - 1 };
+          await axios.put(`http://localhost:5000/cart/${item.id}`, updatedItem, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          this.fetchCart();
+        } catch (error) {
+          console.error("Error decreasing quantity:", error);
+        }
+      }
+    },
+
+    goToCheckout() {
+      this.$router.push('/checkout');
     }
-  }
+  },
+  filters: {
+    currency(value) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+    },
+  },
 };
 </script>
 
 <style scoped>
-.cart-page {
-  padding: 2rem;
+.cart-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-.cart-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-
 .cart-item {
   display: flex;
-  gap: 1.5rem;
-  border: 1px solid #e0e0e0;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
-
-.item-image {
-  width: 120px;
-  height: 120px;
+.product-image-container {
+  margin-right: 20px;
+}
+.product-image {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
 }
-
-.item-details {
+.product-details {
   flex: 1;
 }
-
-.item-name {
+.product-details h3 {
+  margin: 0;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
 }
-
-.item-price {
-  color: #28a745;
-  font-weight: 500;
-  margin: 0.5rem 0;
+.product-details p {
+  margin: 5px 0;
 }
-
-.quantity-controls {
+.quantity-control {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
+  margin: 10px 0;
 }
-
-.quantity-controls button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 4px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.item-subtotal {
-  font-weight: 500;
-}
-
-.remove-btn {
-  margin-top: 8px;
-  color: #dc3545;
-  background: none;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.cart-summary {
-  border-top: 2px solid #eaeaea;
-  padding-top: 1rem;
-  text-align: right;
-}
-
-.summary-total {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.checkout-button {
-  background: #28a745;
+.quantity-control button {
+  background-color: #4CAF50;
   color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
+  border: none;
+  padding: 6px 12px;
   font-size: 16px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
-.checkout-button:hover {
-  background: #218838;
+.quantity-control button:hover {
+  background-color: #388E3C;
 }
-
-@media (max-width: 768px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .item-details {
-    text-align: center;
-  }
-
-  .cart-summary {
-    text-align: center;
-  }
+.remove-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.remove-item button:hover {
+  background-color: #d32f2f;
+}
+.total-section {
+  margin-top: 30px;
+  text-align: center;
+}
+.total-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.checkout-btn button {
+  background-color: #2196F3;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.checkout-btn button:hover {
+  background-color: #1976D2;
 }
 </style>

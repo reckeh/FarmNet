@@ -9,17 +9,14 @@ orders_bp = Blueprint('orders', __name__)
 def get_farmer_orders():
     farmer_id = get_jwt_identity()
 
-    # Get all OrderItems that belong to the current farmer's products
     items = OrderItem.query.join(Product).filter(Product.farmer_id == farmer_id).all()
 
-    # Extract unique order IDs
     unique_orders = {}
     for item in items:
         order = item.order
         if order.id not in unique_orders:
             unique_orders[order.id] = order
 
-    # Compile data
     orders_data = []
     for order in unique_orders.values():
         delivery = order.delivery

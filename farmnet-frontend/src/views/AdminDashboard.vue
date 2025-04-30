@@ -52,7 +52,7 @@
 import axios from 'axios';
 import { jsPDF } from "jspdf";
 
-const BASE_URL = 'http://127.0.0.1:5000'; // Your Flask backend
+const BASE_URL = 'http://127.0.0.1:5000'; // Flask backend
 
 export default {
   name: 'AdminDashboard',
@@ -153,19 +153,16 @@ export default {
       this.userForm = { name: '', email: '', role: '', password: '' };
       this.editingUserId = null;
     },
-    // Method to generate and download the PDF of user actions
     generatePDF() {
       const doc = new jsPDF();
       doc.text('User Actions Log', 20, 20);
       let yPosition = 30;
       
-      // Add the log data to the PDF
       this.usage.logs.forEach(log => {
         doc.text(`${log.user} - ${log.action} @ ${log.date}`, 20, yPosition);
-        yPosition += 10; // move down for the next log entry
+        yPosition += 10; 
       });
 
-      // Download the PDF
       doc.save('user-actions-log.pdf');
     }
   },
@@ -174,11 +171,10 @@ export default {
     this.fetchUsage();
     this.fetchReports();
 
-    // Refresh the data every 10 seconds (you can adjust this interval)
     setInterval(() => {
       this.fetchUsage();
       this.fetchReports();
-    }, 10000); // 10000ms = 10 seconds
+    }, 1200000); 
   }
 };
 </script>

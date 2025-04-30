@@ -8,7 +8,6 @@ import re
 
 users_bp = Blueprint('users', __name__)
 
-# Helper function to validate email format
 def is_valid_email(email):
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(email_regex, email)
@@ -26,7 +25,7 @@ def get_profile():
         "id": user.id,
         "username": user.username,
         "email": user.email,
-        "role": user.role.value  # Convert Enum to string
+        "role": user.role.value  
     })
 
 # UPDATE user profile
@@ -40,7 +39,6 @@ def update_profile():
     if not user:
         return jsonify({"error": "User not found"}), 404
 
-    # Validate username (for example, no empty string)
     if "username" in data and not data["username"]:
         return jsonify({"error": "Username cannot be empty"}), 400
 

@@ -55,7 +55,7 @@ def get_market_prices():
     end_date = request.args.get('end_date')
 
     page = request.args.get('page', 1, type=int)
-    per_page = min(request.args.get('per_page', 10, type=int), 50)  # cap per_page to 50
+    per_page = min(request.args.get('per_page', 10, type=int), 50)  
 
     query = MarketPrice.query
 

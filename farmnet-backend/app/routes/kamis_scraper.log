@@ -1,0 +1,388 @@
+2025-04-29 05:46:14,564 - INFO - Database table ready
+2025-04-29 05:46:14,565 - INFO - Scraping data for Dry Maize (ID: 1)
+2025-04-29 05:46:27,864 - INFO - Added 109 new records for Dry Maize
+2025-04-29 05:46:29,107 - INFO - Scraping data for Red Sorghum (ID: 2)
+2025-04-29 05:46:38,633 - INFO - Added 75 new records for Red Sorghum
+2025-04-29 05:46:40,222 - INFO - Scraping data for Wheat (ID: 3)
+2025-04-29 05:46:47,245 - INFO - Added 27 new records for Wheat
+2025-04-29 05:46:49,642 - INFO - Scraping data for Rice (ID: 4)
+2025-04-29 05:46:59,113 - INFO - Added 69 new records for Rice
+2025-04-29 05:47:01,465 - INFO - Scraping data for Green Grams (ID: 10)
+2025-04-29 05:47:12,318 - INFO - Added 85 new records for Green Grams
+2025-04-29 05:47:14,456 - INFO - Scraping data for Ground Nuts (ID: 12)
+2025-04-29 05:47:24,082 - INFO - Added 55 new records for Ground Nuts
+2025-04-29 05:47:27,014 - INFO - Scraping data for Beans Red Haricot (Wairimu) (ID: 29)
+2025-04-29 05:47:34,781 - INFO - Added 68 new records for Beans Red Haricot (Wairimu)
+2025-04-29 05:47:36,213 - INFO - Scraping data for Beans (Yellow-Green) (ID: 30)
+2025-04-29 05:47:45,137 - INFO - Added 85 new records for Beans (Yellow-Green)
+2025-04-29 05:47:47,883 - INFO - Scraping data for Dolichos lablab (Njahi) (ID: 50)
+2025-04-29 05:47:56,188 - INFO - Added 67 new records for Dolichos lablab (Njahi)
+2025-04-29 05:47:59,077 - INFO - Scraping data for Pearl Rush Millet (ID: 51)
+2025-04-29 05:48:06,231 - INFO - Added 29 new records for Pearl Rush Millet
+2025-04-29 05:48:07,524 - INFO - Scraping data for Finger Millet (ID: 54)
+2025-04-29 05:48:16,498 - INFO - Added 72 new records for Finger Millet
+2025-04-29 05:48:18,295 - INFO - Scraping data for White Sorghum (ID: 56)
+2025-04-29 05:48:25,007 - INFO - Added 21 new records for White Sorghum
+2025-04-29 05:48:27,270 - INFO - Scraping data for Red Irish potato (ID: 57)
+2025-04-29 05:48:35,379 - INFO - Added 31 new records for Red Irish potato
+2025-04-29 05:48:37,384 - INFO - Scraping data for Cabbages (ID: 58)
+2025-04-29 05:48:48,738 - INFO - Added 118 new records for Cabbages
+2025-04-29 05:48:51,254 - INFO - Scraping data for Sweet potatoes (ID: 59)
+2025-04-29 05:49:00,497 - INFO - Added 66 new records for Sweet potatoes
+2025-04-29 05:49:02,597 - INFO - Scraping data for Carrots (ID: 60)
+2025-04-29 05:49:12,686 - INFO - Added 105 new records for Carrots
+2025-04-29 05:49:14,110 - INFO - Scraping data for Tomatoes (ID: 61)
+2025-04-29 05:49:25,901 - INFO - Added 116 new records for Tomatoes
+2025-04-29 05:49:28,346 - INFO - Scraping data for Beans Rosecoco (ID: 64)
+2025-04-29 05:49:37,973 - INFO - Added 53 new records for Beans Rosecoco
+2025-04-29 05:49:39,597 - INFO - Scraping data for Beans (Mwitemania) (ID: 65)
+2025-04-29 05:49:48,048 - INFO - Added 54 new records for Beans (Mwitemania)
+2025-04-29 05:49:50,673 - INFO - Scraping data for Beans (Mwezi Moja) (ID: 66)
+2025-04-29 05:49:58,306 - INFO - Added 33 new records for Beans (Mwezi Moja)
+2025-04-29 05:49:59,801 - INFO - Scraping data for Beans (Canadian wonder) (ID: 67)
+2025-04-29 05:50:07,432 - INFO - Added 13 new records for Beans (Canadian wonder)
+2025-04-29 05:50:09,331 - INFO - Scraping data for Tilapia (ID: 68)
+2025-04-29 05:50:16,311 - INFO - Added 11 new records for Tilapia
+2025-04-29 05:50:18,080 - INFO - Scraping data for Goat Milk (at collection point) (ID: 70)
+2025-04-29 05:50:23,697 - INFO - Added 0 new records for Goat Milk (at collection point)
+2025-04-29 05:50:25,195 - INFO - Scraping data for Eggs (ID: 72)
+2025-04-29 05:50:34,488 - INFO - Added 36 new records for Eggs
+2025-04-29 05:50:36,035 - INFO - Scraping data for Meat Beef (ID: 73)
+2025-04-29 05:50:43,127 - INFO - Added 25 new records for Meat Beef
+2025-04-29 05:50:44,157 - INFO - Scraping data for Meat Mutton (ID: 74)
+2025-04-29 05:50:50,181 - INFO - Added 0 new records for Meat Mutton
+2025-04-29 05:50:51,240 - INFO - Scraping data for Meat Indiginous Chicken (ID: 75)
+2025-04-29 05:50:57,020 - INFO - Added 0 new records for Meat Indiginous Chicken
+2025-04-29 05:50:59,283 - INFO - Scraping data for Meat Broiler (ID: 76)
+2025-04-29 05:51:05,449 - INFO - Added 8 new records for Meat Broiler
+2025-04-29 05:51:06,835 - INFO - Scraping data for Omena (ID: 77)
+2025-04-29 05:51:14,090 - INFO - Added 19 new records for Omena
+2025-04-29 05:51:16,391 - INFO - Scraping data for Cat Fish(Mkizi/Fume) (ID: 78)
+2025-04-29 05:51:22,437 - INFO - Added 0 new records for Cat Fish(Mkizi/Fume)
+2025-04-29 05:51:24,189 - INFO - Scraping data for Haplochromis (ID: 79)
+2025-04-29 05:51:29,117 - INFO - Added 0 new records for Haplochromis
+2025-04-29 05:51:31,895 - INFO - Scraping data for Trout (ID: 80)
+2025-04-29 05:51:36,690 - INFO - Added 0 new records for Trout
+2025-04-29 05:51:38,558 - INFO - Scraping data for Common Carp (ID: 81)
+2025-04-29 05:51:43,642 - INFO - Added 1 new records for Common Carp
+2025-04-29 05:51:45,456 - INFO - Scraping data for Protopterus (ID: 82)
+2025-04-29 05:51:51,617 - INFO - Added 0 new records for Protopterus
+2025-04-29 05:51:54,198 - INFO - Scraping data for Black bass (ID: 83)
+2025-04-29 05:51:58,913 - INFO - Added 0 new records for Black bass
+2025-04-29 05:52:00,244 - INFO - Scraping data for Labeo (ID: 84)
+2025-04-29 05:52:05,128 - INFO - Added 0 new records for Labeo
+2025-04-29 05:52:07,014 - INFO - Scraping data for Mormyrus (ID: 85)
+2025-04-29 05:52:12,433 - INFO - Added 0 new records for Mormyrus
+2025-04-29 05:52:14,573 - INFO - Scraping data for Eel (ID: 86)
+2025-04-29 05:52:19,449 - INFO - Added 0 new records for Eel
+2025-04-29 05:52:20,498 - INFO - Scraping data for African butter catfish (ID: 87)
+2025-04-29 05:52:25,626 - INFO - Added 0 new records for African butter catfish
+2025-04-29 05:52:26,757 - INFO - Scraping data for Synodontis (ID: 89)
+2025-04-29 05:52:31,822 - INFO - Added 0 new records for Synodontis
+2025-04-29 05:52:33,229 - INFO - Scraping data for Alestes (ID: 90)
+2025-04-29 05:52:38,159 - INFO - Added 0 new records for Alestes
+2025-04-29 05:52:40,238 - INFO - Scraping data for Barbus (ID: 91)
+2025-04-29 05:52:44,783 - INFO - Added 0 new records for Barbus
+2025-04-29 05:52:46,895 - INFO - Scraping data for Other Fresh Water (ID: 92)
+2025-04-29 05:52:51,935 - INFO - Added 0 new records for Other Fresh Water
+2025-04-29 05:52:53,446 - INFO - Scraping data for Snappers(Tazanda) (ID: 93)
+2025-04-29 05:52:58,338 - INFO - Added 0 new records for Snappers(Tazanda)
+2025-04-29 05:52:59,493 - INFO - Scraping data for Rabbitfish (Tafi/Tasi) (ID: 94)
+2025-04-29 05:53:05,525 - INFO - Added 11 new records for Rabbitfish (Tafi/Tasi)
+2025-04-29 05:53:06,955 - INFO - Scraping data for Mixed Demersal (ID: 95)
+2025-04-29 05:53:11,805 - INFO - Added 0 new records for Mixed Demersal
+2025-04-29 05:53:14,470 - INFO - Scraping data for Barracuda(Kasumba) (ID: 96)
+2025-04-29 05:53:20,407 - INFO - Added 0 new records for Barracuda(Kasumba)
+2025-04-29 05:53:22,250 - INFO - Scraping data for Tuna (ID: 97)
+2025-04-29 05:53:28,276 - INFO - Added 3 new records for Tuna
+2025-04-29 05:53:29,786 - INFO - Scraping data for Mackerel (ID: 98)
+2025-04-29 05:53:35,212 - INFO - Added 1 new records for Mackerel
+2025-04-29 05:53:37,839 - INFO - Scraping data for Kingfish (Nguru) (ID: 99)
+2025-04-29 05:53:43,547 - INFO - Added 0 new records for Kingfish (Nguru)
+2025-04-29 05:53:44,874 - INFO - Scraping data for Sharks (ID: 100)
+2025-04-29 05:53:50,174 - INFO - Added 0 new records for Sharks
+2025-04-29 05:53:52,807 - INFO - Scraping data for Sardines (ID: 101)
+2025-04-29 05:53:57,640 - INFO - Added 0 new records for Sardines
+2025-04-29 05:54:00,232 - INFO - Scraping data for Swordfishes (ID: 102)
+2025-04-29 05:54:04,964 - INFO - Added 0 new records for Swordfishes
+2025-04-29 05:54:07,706 - INFO - Scraping data for Lobster(Kamba Mawe) (ID: 103)
+2025-04-29 05:54:12,361 - INFO - Added 0 new records for Lobster(Kamba Mawe)
+2025-04-29 05:54:14,258 - INFO - Scraping data for Prawns (ID: 104)
+2025-04-29 05:54:19,118 - INFO - Added 2 new records for Prawns
+2025-04-29 05:54:20,151 - INFO - Scraping data for Mud Crabs (ID: 107)
+2025-04-29 05:54:25,022 - INFO - Added 0 new records for Mud Crabs
+2025-04-29 05:54:26,360 - INFO - Scraping data for Golden (Deep-Sea) Crabs Kaa (ID: 108)
+2025-04-29 05:54:30,998 - INFO - Added 0 new records for Golden (Deep-Sea) Crabs Kaa
+2025-04-29 05:54:33,075 - INFO - Scraping data for Fresh Water Shrimp (ID: 109)
+2025-04-29 05:54:38,992 - INFO - Added 1 new records for Fresh Water Shrimp
+2025-04-29 05:54:40,744 - INFO - Scraping data for Octopus (Pweza) (ID: 110)
+2025-04-29 05:54:46,077 - INFO - Added 4 new records for Octopus (Pweza)
+2025-04-29 05:54:47,854 - INFO - Scraping data for Cuttlefish (ID: 111)
+2025-04-29 05:54:52,530 - INFO - Added 0 new records for Cuttlefish
+2025-04-29 05:54:54,427 - INFO - Scraping data for Squid(Ngisi) (ID: 112)
+2025-04-29 05:54:59,513 - INFO - Added 6 new records for Squid(Ngisi)
+2025-04-29 05:55:01,784 - INFO - Scraping data for Oysters (ID: 113)
+2025-04-29 05:55:06,596 - INFO - Added 0 new records for Oysters
+2025-04-29 05:55:09,332 - INFO - Scraping data for Fish Oil (ID: 114)
+2025-04-29 05:55:14,218 - INFO - Added 3 new records for Fish Oil
+2025-04-29 05:55:15,312 - INFO - Scraping data for Fish Maws (ID: 115)
+2025-04-29 05:55:20,073 - INFO - Added 3 new records for Fish Maws
+2025-04-29 05:55:21,815 - INFO - Scraping data for Nile Perch Skins (ID: 117)
+2025-04-29 05:55:26,968 - INFO - Added 0 new records for Nile Perch Skins
+2025-04-29 05:55:29,053 - INFO - Scraping data for Black nightshade (Managu/ Osuga) (ID: 121)
+2025-04-29 05:55:37,430 - INFO - Added 72 new records for Black nightshade (Managu/ Osuga)
+2025-04-29 05:55:38,500 - INFO - Scraping data for Spider flower (Saga) (ID: 122)
+2025-04-29 05:55:45,889 - INFO - Added 39 new records for Spider flower (Saga)
+2025-04-29 05:55:47,429 - INFO - Scraping data for Amaranthus (Terere) (ID: 123)
+2025-04-29 05:55:55,232 - INFO - Added 65 new records for Amaranthus (Terere)
+2025-04-29 05:55:57,480 - INFO - Scraping data for Jute Plant (Murenda) (ID: 124)
+2025-04-29 05:56:04,147 - INFO - Added 25 new records for Jute Plant (Murenda)
+2025-04-29 05:56:05,514 - INFO - Scraping data for Passion Fruits (ID: 125)
+2025-04-29 05:56:13,290 - INFO - Added 39 new records for Passion Fruits
+2025-04-29 05:56:15,970 - INFO - Scraping data for Oranges (ID: 127)
+2025-04-29 05:56:25,736 - INFO - Added 65 new records for Oranges
+2025-04-29 05:56:27,731 - INFO - Scraping data for Tree tomato (ID: 128)
+2025-04-29 05:56:34,787 - INFO - Added 32 new records for Tree tomato
+2025-04-29 05:56:36,188 - INFO - Scraping data for Pepino melon (ID: 129)
+2025-04-29 05:56:42,327 - INFO - Added 14 new records for Pepino melon
+2025-04-29 05:56:44,804 - INFO - Scraping data for Thorn melon (ID: 130)
+2025-04-29 05:56:51,261 - INFO - Added 32 new records for Thorn melon
+2025-04-29 05:56:54,056 - INFO - Scraping data for Yam (ID: 131)
+2025-04-29 05:57:00,466 - INFO - Added 10 new records for Yam
+2025-04-29 05:57:03,068 - INFO - Scraping data for Cow Milk(At collection point) (ID: 133)
+2025-04-29 05:57:09,847 - INFO - Added 26 new records for Cow Milk(At collection point)
+2025-04-29 05:57:12,303 - INFO - Scraping data for Camel Milk(At collection point) (ID: 134)
+2025-04-29 05:57:18,225 - INFO - Added 0 new records for Camel Milk(At collection point)
+2025-04-29 05:57:19,974 - INFO - Scraping data for Camel milk(Processed) (ID: 138)
+2025-04-29 05:57:24,996 - INFO - Added 0 new records for Camel milk(Processed)
+2025-04-29 05:57:27,096 - INFO - Scraping data for Goat milk (Processed) (ID: 139)
+2025-04-29 05:57:32,098 - INFO - Added 6 new records for Goat milk (Processed)
+2025-04-29 05:57:34,795 - INFO - Scraping data for Cattle (ID: 140)
+2025-04-29 05:57:48,326 - INFO - Added 35 new records for Cattle
+2025-04-29 05:57:51,064 - INFO - Scraping data for Pork (ID: 141)
+2025-04-29 05:57:57,446 - INFO - Added 13 new records for Pork
+2025-04-29 05:57:58,600 - INFO - Scraping data for Avocado (ID: 142)
+2025-04-29 05:58:08,225 - INFO - Added 72 new records for Avocado
+2025-04-29 05:58:09,993 - INFO - Scraping data for Arrow Root (ID: 143)
+2025-04-29 05:58:18,026 - INFO - Added 63 new records for Arrow Root
+2025-04-29 05:58:20,148 - INFO - Scraping data for Lemons (ID: 145)
+2025-04-29 05:58:28,620 - INFO - Added 50 new records for Lemons
+2025-04-29 05:58:30,963 - INFO - Scraping data for Mangoes (ID: 147)
+2025-04-29 05:58:39,828 - INFO - Added 46 new records for Mangoes
+2025-04-29 05:58:40,873 - INFO - Scraping data for Limes (ID: 148)
+2025-04-29 05:58:47,768 - INFO - Added 4 new records for Limes
+2025-04-29 05:58:48,836 - INFO - Scraping data for Green Maize (ID: 149)
+2025-04-29 05:58:57,691 - INFO - Added 60 new records for Green Maize
+2025-04-29 05:59:00,564 - INFO - Scraping data for Water Melon (ID: 150)
+2025-04-29 05:59:09,001 - INFO - Added 68 new records for Water Melon
+2025-04-29 05:59:11,191 - INFO - Scraping data for Pineapples (ID: 151)
+2025-04-29 05:59:20,298 - INFO - Added 51 new records for Pineapples
+2025-04-29 05:59:21,580 - INFO - Scraping data for Pawpaw (ID: 152)
+2025-04-29 05:59:29,554 - INFO - Added 42 new records for Pawpaw
+2025-04-29 05:59:31,662 - INFO - Scraping data for Cow Milk(Processd) (ID: 153)
+2025-04-29 05:59:38,104 - INFO - Added 21 new records for Cow Milk(Processd)
+2025-04-29 05:59:40,786 - INFO - Scraping data for Kales/Sukuma Wiki (ID: 154)
+2025-04-29 05:59:51,284 - INFO - Added 84 new records for Kales/Sukuma Wiki
+2025-04-29 05:59:52,543 - INFO - Scraping data for Dry Onions (ID: 158)
+2025-04-29 06:00:03,980 - INFO - Added 116 new records for Dry Onions
+2025-04-29 06:00:05,170 - INFO - Scraping data for Spring Onions (ID: 159)
+2025-04-29 06:00:14,092 - INFO - Added 48 new records for Spring Onions
+2025-04-29 06:00:15,682 - INFO - Scraping data for Fresh Peas (ID: 160)
+2025-04-29 06:00:23,904 - INFO - Added 54 new records for Fresh Peas
+2025-04-29 06:00:25,549 - INFO - Scraping data for Spinach (ID: 161)
+2025-04-29 06:00:33,988 - INFO - Added 69 new records for Spinach
+2025-04-29 06:00:35,909 - INFO - Scraping data for Cassava Fresh (ID: 162)
+2025-04-29 06:00:43,795 - INFO - Added 43 new records for Cassava Fresh
+2025-04-29 06:00:46,663 - INFO - Scraping data for White Irish Potatoes (ID: 163)
+2025-04-29 06:00:56,990 - INFO - Added 102 new records for White Irish Potatoes
+2025-04-29 06:00:59,650 - INFO - Scraping data for Cassava Chips (dry) (ID: 164)
+2025-04-29 06:01:06,745 - INFO - Added 30 new records for Cassava Chips (dry)
+2025-04-29 06:01:09,503 - INFO - Scraping data for Chillies (ID: 165)
+2025-04-29 06:01:17,512 - INFO - Added 50 new records for Chillies
+2025-04-29 06:01:18,640 - INFO - Scraping data for Lettuce (ID: 166)
+2025-04-29 06:01:25,461 - INFO - Added 7 new records for Lettuce
+2025-04-29 06:01:28,104 - INFO - Scraping data for Sheep (ID: 167)
+2025-04-29 06:01:39,232 - INFO - Added 35 new records for Sheep
+2025-04-29 06:01:41,997 - INFO - Scraping data for Goat (ID: 168)
+2025-04-29 06:01:54,509 - INFO - Added 37 new records for Goat
+2025-04-29 06:01:55,682 - INFO - Scraping data for Donkey (ID: 169)
+2025-04-29 06:02:02,543 - INFO - Added 3 new records for Donkey
+2025-04-29 06:02:04,390 - INFO - Scraping data for Pumpkin (ID: 170)
+2025-04-29 06:02:11,488 - INFO - Added 41 new records for Pumpkin
+2025-04-29 06:02:13,836 - INFO - Scraping data for Butternuts (ID: 171)
+2025-04-29 06:02:21,166 - INFO - Added 46 new records for Butternuts
+2025-04-29 06:02:23,785 - INFO - Scraping data for Capsicums (ID: 172)
+2025-04-29 06:02:33,146 - INFO - Added 81 new records for Capsicums
+2025-04-29 06:02:34,522 - INFO - Scraping data for Cucumber (ID: 173)
+2025-04-29 06:02:41,913 - INFO - Added 42 new records for Cucumber
+2025-04-29 06:02:43,967 - INFO - Scraping data for Egg plant (Brinjals) (ID: 174)
+2025-04-29 06:02:51,648 - INFO - Added 39 new records for Egg plant (Brinjals)
+2025-04-29 06:02:53,060 - INFO - Scraping data for Cauliflower (ID: 175)
+2025-04-29 06:02:59,913 - INFO - Added 9 new records for Cauliflower
+2025-04-29 06:03:01,747 - INFO - Scraping data for French beans (ID: 177)
+2025-04-29 06:03:08,326 - INFO - Added 31 new records for French beans
+2025-04-29 06:03:10,880 - INFO - Scraping data for Ginger (ID: 178)
+2025-04-29 06:03:18,455 - INFO - Added 60 new records for Ginger
+2025-04-29 06:03:19,644 - INFO - Scraping data for Garlic (ID: 180)
+2025-04-29 06:03:27,459 - INFO - Added 62 new records for Garlic
+2025-04-29 06:03:28,906 - INFO - Scraping data for Njugu Mawe (ID: 182)
+2025-04-29 06:03:35,071 - INFO - Added 8 new records for Njugu Mawe
+2025-04-29 06:03:37,476 - INFO - Scraping data for Beans Rosecoco (Nyayo) (ID: 183)
+2025-04-29 06:03:45,507 - INFO - Added 71 new records for Beans Rosecoco (Nyayo)
+2025-04-29 06:03:48,379 - INFO - Scraping data for Nile Perch (ID: 184)
+2025-04-29 06:03:55,369 - INFO - Added 8 new records for Nile Perch
+2025-04-29 06:03:56,626 - INFO - Scraping data for Camel (ID: 186)
+2025-04-29 06:04:03,255 - INFO - Added 1 new records for Camel
+2025-04-29 06:04:04,680 - INFO - Scraping data for Rabbit (ID: 187)
+2025-04-29 06:04:09,446 - INFO - Added 0 new records for Rabbit
+2025-04-29 06:04:10,791 - INFO - Scraping data for Pigeon peas (ID: 188)
+2025-04-29 06:04:17,932 - INFO - Added 51 new records for Pigeon peas
+2025-04-29 06:04:20,244 - INFO - Scraping data for Cowpeas (ID: 189)
+2025-04-29 06:04:29,216 - INFO - Added 72 new records for Cowpeas
+2025-04-29 06:04:31,097 - INFO - Scraping data for Scavengers (Changu/Tangu) (ID: 190)
+2025-04-29 06:04:36,884 - INFO - Added 9 new records for Scavengers (Changu/Tangu)
+2025-04-29 06:04:39,529 - INFO - Scraping data for Parrotfishes(Pono) (ID: 191)
+2025-04-29 06:04:44,864 - INFO - Added 10 new records for Parrotfishes(Pono)
+2025-04-29 06:04:46,177 - INFO - Scraping data for Groupers (ID: 192)
+2025-04-29 06:04:50,853 - INFO - Added 0 new records for Groupers
+2025-04-29 06:04:52,542 - INFO - Scraping data for Grunt(Taamamba/Kora) (ID: 193)
+2025-04-29 06:04:57,594 - INFO - Added 0 new records for Grunt(Taamamba/Kora)
+2025-04-29 06:04:59,735 - INFO - Scraping data for Mullets(Fumi) (ID: 194)
+2025-04-29 06:05:04,761 - INFO - Added 1 new records for Mullets(Fumi)
+2025-04-29 06:05:06,335 - INFO - Scraping data for Surgeonfishes (ID: 195)
+2025-04-29 06:05:10,997 - INFO - Added 0 new records for Surgeonfishes
+2025-04-29 06:05:13,000 - INFO - Scraping data for Threadfin breams (ID: 196)
+2025-04-29 06:05:17,825 - INFO - Added 0 new records for Threadfin breams
+2025-04-29 06:05:20,798 - INFO - Scraping data for Goatfishes (ID: 197)
+2025-04-29 06:05:25,699 - INFO - Added 0 new records for Goatfishes
+2025-04-29 06:05:26,946 - INFO - Scraping data for Rayfish (ID: 198)
+2025-04-29 06:05:31,937 - INFO - Added 0 new records for Rayfish
+2025-04-29 06:05:33,839 - INFO - Scraping data for Needlefishes (ID: 199)
+2025-04-29 06:05:38,722 - INFO - Added 0 new records for Needlefishes
+2025-04-29 06:05:41,411 - INFO - Scraping data for Jacks/Trevallies(Kolekole) (ID: 200)
+2025-04-29 06:05:46,738 - INFO - Added 0 new records for Jacks/Trevallies(Kolekole)
+2025-04-29 06:05:48,605 - INFO - Scraping data for Halfbeaks (ID: 201)
+2025-04-29 06:05:53,296 - INFO - Added 0 new records for Halfbeaks
+2025-04-29 06:05:55,758 - INFO - Scraping data for Anchovies (ID: 202)
+2025-04-29 06:06:01,035 - INFO - Added 1 new records for Anchovies
+2025-04-29 06:06:03,729 - INFO - Scraping data for Sailfishes (ID: 203)
+2025-04-29 06:06:08,463 - INFO - Added 0 new records for Sailfishes
+2025-04-29 06:06:10,473 - INFO - Scraping data for Wolf Herrings (ID: 204)
+2025-04-29 06:06:15,079 - INFO - Added 0 new records for Wolf Herrings
+2025-04-29 06:06:16,317 - INFO - Scraping data for Marlins (ID: 205)
+2025-04-29 06:06:20,906 - INFO - Added 0 new records for Marlins
+2025-04-29 06:06:23,028 - INFO - Scraping data for Jobfish (ID: 206)
+2025-04-29 06:06:27,652 - INFO - Added 0 new records for Jobfish
+2025-04-29 06:06:30,350 - INFO - Scraping data for Mixed Pelagics (ID: 207)
+2025-04-29 06:06:35,674 - INFO - Added 0 new records for Mixed Pelagics
+2025-04-29 06:06:38,423 - INFO - Scraping data for Camel meat (ID: 208)
+2025-04-29 06:06:44,652 - INFO - Added 0 new records for Camel meat
+2025-04-29 06:06:46,298 - INFO - Scraping data for Meat Chevon (ID: 209)
+2025-04-29 06:06:52,681 - INFO - Added 11 new records for Meat Chevon
+2025-04-29 06:06:55,483 - INFO - Scraping data for Rabbit Meat (ID: 210)
+2025-04-29 06:07:00,030 - INFO - Added 0 new records for Rabbit Meat
+2025-04-29 06:07:02,042 - INFO - Scraping data for Pigs (ID: 211)
+2025-04-29 06:07:06,738 - INFO - Added 1 new records for Pigs
+2025-04-29 06:07:07,864 - INFO - Scraping data for Honey (ID: 212)
+2025-04-29 06:07:14,057 - INFO - Added 12 new records for Honey
+2025-04-29 06:07:16,596 - INFO - Scraping data for Cattle Hide (ID: 213)
+2025-04-29 06:07:22,661 - INFO - Added 2 new records for Cattle Hide
+2025-04-29 06:07:23,793 - INFO - Scraping data for Camel Hide (ID: 214)
+2025-04-29 06:07:28,538 - INFO - Added 0 new records for Camel Hide
+2025-04-29 06:07:29,879 - INFO - Scraping data for Goat Skin (ID: 215)
+2025-04-29 06:07:35,959 - INFO - Added 2 new records for Goat Skin
+2025-04-29 06:07:38,620 - INFO - Scraping data for Sheep Skin (ID: 216)
+2025-04-29 06:07:44,569 - INFO - Added 2 new records for Sheep Skin
+2025-04-29 06:07:46,917 - INFO - Scraping data for Fertilizer (ID: 217)
+2025-04-29 06:07:55,597 - INFO - Added 21 new records for Fertilizer
+2025-04-29 06:07:57,457 - INFO - Scraping data for Tea (ID: 218)
+2025-04-29 06:08:02,675 - INFO - Added 0 new records for Tea
+2025-04-29 06:08:04,443 - INFO - Scraping data for Coffee (ID: 219)
+2025-04-29 06:08:09,164 - INFO - Added 0 new records for Coffee
+2025-04-29 06:08:10,409 - INFO - Scraping data for Wheat Bran (ID: 220)
+2025-04-29 06:08:16,379 - INFO - Added 3 new records for Wheat Bran
+2025-04-29 06:08:17,778 - INFO - Scraping data for Maize Bran (ID: 221)
+2025-04-29 06:08:23,441 - INFO - Added 3 new records for Maize Bran
+2025-04-29 06:08:25,871 - INFO - Scraping data for Sunflower Cake (ID: 222)
+2025-04-29 06:08:31,061 - INFO - Added 3 new records for Sunflower Cake
+2025-04-29 06:08:33,477 - INFO - Scraping data for Cotton Seed (ID: 223)
+2025-04-29 06:08:38,227 - INFO - Added 0 new records for Cotton Seed
+2025-04-29 06:08:39,451 - INFO - Scraping data for Cotton (ID: 224)
+2025-04-29 06:08:44,083 - INFO - Added 3 new records for Cotton
+2025-04-29 06:08:45,782 - INFO - Scraping data for Banana (Ripening) (ID: 226)
+2025-04-29 06:08:55,368 - INFO - Added 64 new records for Banana (Ripening)
+2025-04-29 06:08:57,544 - INFO - Scraping data for Chicken (ID: 227)
+2025-04-29 06:09:09,696 - INFO - Added 42 new records for Chicken
+2025-04-29 06:09:12,370 - INFO - Scraping data for Macademia Seed (ID: 228)
+2025-04-29 06:09:17,203 - INFO - Added 2 new records for Macademia Seed
+2025-04-29 06:09:19,055 - INFO - Scraping data for Cowpea leaves (Kunde) (ID: 230)
+2025-04-29 06:09:26,487 - INFO - Added 54 new records for Cowpea leaves (Kunde)
+2025-04-29 06:09:27,769 - INFO - Scraping data for Nderema- Vine Spinach (ID: 231)
+2025-04-29 06:09:33,708 - INFO - Added 7 new records for Nderema- Vine Spinach
+2025-04-29 06:09:34,901 - INFO - Scraping data for Pumpkin Leaves (ID: 233)
+2025-04-29 06:09:41,836 - INFO - Added 37 new records for Pumpkin Leaves
+2025-04-29 06:09:43,673 - INFO - Scraping data for Ethiopian Kales -Kanzira (ID: 234)
+2025-04-29 06:09:50,082 - INFO - Added 22 new records for Ethiopian Kales -Kanzira
+2025-04-29 06:09:52,432 - INFO - Scraping data for Indigenous Crotolaria (Mito/Miro) (ID: 235)
+2025-04-29 06:09:58,815 - INFO - Added 22 new records for Indigenous Crotolaria (Mito/Miro)
+2025-04-29 06:10:01,339 - INFO - Scraping data for Soybean oil (ID: 237)
+2025-04-29 06:10:06,348 - INFO - Added 0 new records for Soybean oil
+2025-04-29 06:10:08,697 - INFO - Scraping data for Coconut Oil (ID: 238)
+2025-04-29 06:10:14,262 - INFO - Added 0 new records for Coconut Oil
+2025-04-29 06:10:16,137 - INFO - Scraping data for Sunflower Seeds (ID: 239)
+2025-04-29 06:10:21,432 - INFO - Added 10 new records for Sunflower Seeds
+2025-04-29 06:10:24,390 - INFO - Scraping data for Sunflower Oil (ID: 240)
+2025-04-29 06:10:29,024 - INFO - Added 0 new records for Sunflower Oil
+2025-04-29 06:10:30,146 - INFO - Scraping data for Walnut Seed (ID: 241)
+2025-04-29 06:10:34,693 - WARNING - Price table not found in HTML
+2025-04-29 06:10:34,694 - INFO - Added 0 new records for Walnut Seed
+2025-04-29 06:10:36,649 - INFO - Scraping data for Coriander (Dhania) (ID: 242)
+2025-04-29 06:10:44,701 - INFO - Added 59 new records for Coriander (Dhania)
+2025-04-29 06:10:46,554 - INFO - Scraping data for Grapes (ID: 243)
+2025-04-29 06:10:52,661 - INFO - Added 14 new records for Grapes
+2025-04-29 06:10:53,880 - INFO - Scraping data for Apples (ID: 244)
+2025-04-29 06:11:01,052 - INFO - Added 27 new records for Apples
+2025-04-29 06:11:02,275 - INFO - Scraping data for Dry Peas (ID: 245)
+2025-04-29 06:11:08,820 - INFO - Added 21 new records for Dry Peas
+2025-04-29 06:11:10,498 - INFO - Scraping data for Mixed Beans (ID: 246)
+2025-04-29 06:11:17,098 - INFO - Added 34 new records for Mixed Beans
+2025-04-29 06:11:18,251 - INFO - Scraping data for Rockcode(Tewa) (ID: 247)
+2025-04-29 06:11:23,300 - INFO - Added 0 new records for Rockcode(Tewa)
+2025-04-29 06:11:24,344 - INFO - Scraping data for Queenfish (Pandu) (ID: 248)
+2025-04-29 06:11:29,527 - INFO - Added 0 new records for Queenfish (Pandu)
+2025-04-29 06:11:31,467 - INFO - Scraping data for Maize Flour (ID: 249)
+2025-04-29 06:11:39,968 - INFO - Added 14 new records for Maize Flour
+2025-04-29 06:11:42,499 - INFO - Scraping data for Duck (ID: 251)
+2025-04-29 06:11:48,418 - INFO - Added 6 new records for Duck
+2025-04-29 06:11:50,230 - INFO - Scraping data for Banana (Cooking) (ID: 255)
+2025-04-29 06:11:59,933 - INFO - Added 97 new records for Banana (Cooking)
+2025-04-29 06:12:01,542 - INFO - Scraping data for Banana (Plantain) (ID: 256)
+2025-04-29 06:12:08,440 - INFO - Added 37 new records for Banana (Plantain)
+2025-04-29 06:12:10,207 - INFO - Scraping data for Courgette (ID: 257)
+2025-04-29 06:12:17,215 - INFO - Added 46 new records for Courgette
+2025-04-29 06:12:18,463 - INFO - Scraping data for Broccoli (ID: 258)
+2025-04-29 06:12:24,821 - INFO - Added 11 new records for Broccoli
+2025-04-29 06:12:25,951 - INFO - Scraping data for Lentils (ID: 259)
+2025-04-29 06:12:33,100 - INFO - Added 47 new records for Lentils
+2025-04-29 06:12:35,361 - INFO - Scraping data for Fish Scales (ID: 261)
+2025-04-29 06:12:40,295 - INFO - Added 3 new records for Fish Scales
+2025-04-29 06:12:41,419 - INFO - Scraping data for Tangerine (Sandara) (ID: 262)
+2025-04-29 06:12:47,742 - INFO - Added 7 new records for Tangerine (Sandara)
+2025-04-29 06:12:50,176 - INFO - Scraping data for Pasta (ID: 263)
+2025-04-29 06:12:55,183 - INFO - Added 0 new records for Pasta
+2025-04-29 06:12:57,674 - INFO - Scraping data for Spaghetti (ID: 264)
+2025-04-29 06:13:02,969 - INFO - Added 0 new records for Spaghetti
+2025-04-29 06:13:05,381 - INFO - Scraping data for Wheat Flour (ID: 265)
+2025-04-29 06:13:14,604 - INFO - Added 13 new records for Wheat Flour
+2025-04-29 06:13:17,475 - INFO - Scraping data for Paddy (ID: 267)
+2025-04-29 06:13:23,700 - INFO - Added 4 new records for Paddy
+2025-04-29 06:13:25,492 - INFO - Scraping data for Beans (Yellow) (ID: 269)
+2025-04-29 06:13:30,068 - WARNING - Price table not found in HTML
+2025-04-29 06:13:30,069 - INFO - Added 0 new records for Beans (Yellow)
+2025-04-29 06:13:31,501 - INFO - Scraping data for Coconut (ID: 270)
+2025-04-29 06:13:36,932 - INFO - Added 11 new records for Coconut
+2025-04-29 06:13:38,544 - INFO - Scraping data for Okra (ID: 272)
+2025-04-29 06:13:44,794 - INFO - Added 15 new records for Okra
+2025-04-29 06:13:46,867 - INFO - Scraping data for Cashewnuts (Korosho) (ID: 273)
+2025-04-29 06:13:51,626 - INFO - Added 0 new records for Cashewnuts (Korosho)
+2025-04-29 06:13:53,248 - INFO - Total new records added: 4545

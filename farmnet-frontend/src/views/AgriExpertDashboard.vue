@@ -102,7 +102,6 @@
         }
       },
       logout() {
-        // Clear token/session and redirect
         alert("Logging out...");
         window.location.href = "/login";
       }

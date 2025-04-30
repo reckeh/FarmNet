@@ -7,9 +7,7 @@ import re
 
 user_settings_bp = Blueprint('user_settings', __name__)
 
-# --------------------------
 # UPDATE USER PROFILE
-# --------------------------
 @user_settings_bp.route('/profile', methods=['PUT'])
 @jwt_required()
 def update_profile():
@@ -42,9 +40,7 @@ def update_profile():
     }), 200
 
 
-# --------------------------
 # CHANGE USER PASSWORD
-# --------------------------
 @user_settings_bp.route('/password', methods=['PUT'])
 @jwt_required()
 def change_password():
@@ -79,9 +75,7 @@ def change_password():
     }), 200
 
 
-# --------------------------
-# UPDATE USER PREFERENCES
-# --------------------------
+# UPDATE USER 
 @user_settings_bp.route('/preferences', methods=['PUT'])
 @jwt_required()
 def update_preferences():
@@ -93,7 +87,6 @@ def update_preferences():
 
     data = request.get_json()
 
-    # Assuming preferences are stored as JSON (you can add validation here if needed)
     user.preferences = data.get('preferences', user.preferences)
 
     db.session.commit()
@@ -104,7 +97,6 @@ def update_preferences():
     }), 200
 
 
-# Helper function to validate email format
 def is_valid_email(email):
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(email_regex, email)

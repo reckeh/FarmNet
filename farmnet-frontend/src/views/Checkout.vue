@@ -12,7 +12,7 @@
 
         <div class="form-group">
           <label for="phoneNumber">Phone Number</label>
-          <input type="text" v-model="phoneNumber" id="phoneNumber" placeholder="0712 345 678" required />
+          <input type="tel" v-model="phoneNumber" id="phoneNumber" placeholder="0712 345 678" required />
         </div>
 
         <div class="form-row">
@@ -41,6 +41,7 @@
           <div class="form-group half">
             <label for="deliveryOption">Delivery Service</label>
             <select v-model="deliveryOption" id="deliveryOption" required>
+              <option disabled value="">Select Delivery Option</option>
               <option value="g4s">G4S</option>
               <option value="fargo">Fargo</option>
             </select>
@@ -49,20 +50,23 @@
           <div class="form-group half">
             <label for="paymentMethod">Payment Method</label>
             <select v-model="paymentMethod" id="paymentMethod" required>
+              <option disabled value="">Select Payment Method</option>
               <option value="mobileMoney">Mobile Money</option>
               <option value="creditCard">Credit Card</option>
             </select>
           </div>
         </div>
 
-        <button type="submit" class="submit-btn">Place Order</button>
+        <button type="submit" class="submit-btn" :disabled="loading">
+          {{ loading ? 'Placing Order...' : 'Place Order' }}
+        </button>
       </form>
 
       <!-- Order Summary -->
       <div class="checkout-summary">
         <h3>Order Summary</h3>
         <p><strong>Items:</strong> {{ cartItems.length }}</p>
-        <p><strong>Total:</strong> <span class="total">KES {{ totalPrice.toLocaleString() }}</span></p>
+        <p><strong>Total:</strong> <span class="total">KES {{ formattedTotalPrice }}</span></p>
       </div>
     </div>
   </div>
@@ -78,83 +82,55 @@ export default {
       deliveryTown: "",
       deliveryAddress: "",
       deliveryNotes: "",
-      deliveryOption: "g4s",
-      paymentMethod: "mobileMoney",
+      deliveryOption: "",
+      paymentMethod: "",
       cartItems: [],
       totalPrice: 0,
+      loading: false,
     };
+  },
+  computed: {
+    formattedTotalPrice() {
+      return this.totalPrice.toLocaleString();
+    },
   },
   mounted() {
     this.fetchCart();
   },
   methods: {
-    placeOrder() {
-      const token = localStorage.getItem("token");
+    async fetchCart() {
+      try {
+        const token = localStorage.getItem("token");
+        if (!token) {
+          alert("You must be logged in to checkout.");
+          this.$router.push({ name: "Login" });
+          return;
+        }
 
-      if (!token) return alert("Please log in first.");
+        const response = await fetch("http://127.0.0.1:5000/cart", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-      const payload = {
-        recipient_name: this.recipientName,
-        phone_number: this.phoneNumber,
-        delivery_county: this.deliveryCounty,
-        delivery_town: this.deliveryTown,
-        delivery_address: this.deliveryAddress,
-        delivery_notes: this.deliveryNotes,
-        delivery_option: this.deliveryOption,
-        payment_method: this.paymentMethod,
-        cart_items: this.cartItems,
-      };
+        if (!response.ok) throw new Error("Failed to fetch cart.");
 
-      fetch("http://127.0.0.1:5000/checkout/place_order", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(payload),
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error("Checkout failed");
-          return res.json();
-        })
-        .then(() => {
-          alert("Order placed successfully!");
+        const data = await response.json();
+
+        if (data.cart?.length) {
+          this.cartItems = data.cart.map((item) => ({
+            ...item,
+            price: item.product_price || item.price,
+          }));
+          this.calculateTotalPrice();
+        } else {
           this.cartItems = [];
           this.totalPrice = 0;
-          this.resetForm();
-          this.$router.push({ name: "Orders" });
-        })
-        .catch((err) => {
-          console.error("Checkout error:", err);
-          alert("Failed to place order.");
-        });
-    },
-
-    fetchCart() {
-      const token = localStorage.getItem("token");
-
-      fetch("http://127.0.0.1:5000/cart/cart", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.cart?.length) {
-            this.cartItems = data.cart.map((item) => ({
-              ...item,
-              price: item.product_price || item.price,
-            }));
-            this.calculateTotalPrice();
-          } else {
-            this.cartItems = [];
-          }
-        })
-        .catch((err) => {
-          console.error("Fetch cart error:", err);
-          alert("Failed to load cart.");
-        });
+        }
+      } catch (error) {
+        console.error("Error fetching cart:", error);
+        alert("Failed to load cart.");
+      }
     },
 
     calculateTotalPrice() {
@@ -171,8 +147,72 @@ export default {
       this.deliveryTown = "";
       this.deliveryAddress = "";
       this.deliveryNotes = "";
-      this.deliveryOption = "g4s";
-      this.paymentMethod = "mobileMoney";
+      this.deliveryOption = "";
+      this.paymentMethod = "";
+    },
+
+    async placeOrder() {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        alert("Please log in first.");
+        this.$router.push({ name: "Login" });
+        return;
+      }
+
+      if (this.cartItems.length === 0) {
+        alert("Your cart is empty.");
+        return;
+      }
+
+      this.loading = true;
+
+      const delivery_details = {
+        recipient_name: this.recipientName,
+        phone_number: this.phoneNumber,
+        county: this.deliveryCounty,
+        town: this.deliveryTown,
+        address: this.deliveryAddress,
+        notes: this.deliveryNotes,
+        option: this.deliveryOption,
+        payment_method: this.paymentMethod,
+      };
+
+      const cart_items = this.cartItems.map((item) => ({
+        product_id: item.product_id || item.id,
+        quantity: item.quantity,
+      }));
+
+      const payload = {
+        delivery_details,
+        cart_items,
+      };
+
+      try {
+        const response = await fetch("http://127.0.0.1:5000/cart/order", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) throw new Error("Checkout failed");
+
+        await response.json();
+
+        alert("Order placed successfully!");
+        this.cartItems = [];
+        this.totalPrice = 0;
+        this.resetForm();
+        this.$router.push({ name: "Orders" });
+      } catch (error) {
+        console.error("Checkout error:", error);
+        alert("Failed to place order. Please try again.");
+      } finally {
+        this.loading = false;
+      }
     },
   },
 };
@@ -268,6 +308,11 @@ textarea {
 
 .submit-btn:hover {
   background-color: #218838;
+}
+
+.submit-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
 }
 
 .checkout-summary h3 {

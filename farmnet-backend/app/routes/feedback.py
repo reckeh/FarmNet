@@ -1,13 +1,10 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import Feedback
-from utils import role_required  # Import the role_required decorator
-
+from utils import role_required 
 feedback_bp = Blueprint('feedback', __name__)
 
-# --------------------------
 # SUBMIT FEEDBACK
-# --------------------------
 @feedback_bp.route('/submit', methods=['POST'])
 @jwt_required()
 def submit_feedback():
@@ -30,16 +27,13 @@ def submit_feedback():
         return jsonify({'message': f'Error submitting feedback: {str(e)}'}), 500
 
 
-# --------------------------
-# GET ALL FEEDBACK (FOR ADMIN / SUPPORT ONLY)
-# --------------------------
+# GET ALL FEEDBACK (FOR ADMIN )
 @feedback_bp.route('/all', methods=['GET'])
 @jwt_required()
 @role_required('admin')  # Only admin can access this endpoint
 def get_all_feedback():
     user_id = get_jwt_identity()
 
-    # Pagination
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 10, type=int)
 
@@ -65,12 +59,10 @@ def get_all_feedback():
     }), 200
 
 
-# --------------------------
-# RESOLVE FEEDBACK (FOR ADMIN / SUPPORT ONLY)
-# --------------------------
+# RESOLVE FEEDBACK (FOR ADMIN)
 @feedback_bp.route('/resolve/<int:feedback_id>', methods=['PUT'])
 @jwt_required()
-@role_required('support')  # Only support can resolve feedback
+@role_required('support')  
 def resolve_feedback(feedback_id):
     user_id = get_jwt_identity()
 
